@@ -1,0 +1,331 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', 'Frutiger 45 Light', Arial, Helvetica, sans-serif;
+    background: #f4f6fb;
+    color: #222;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    background: #f4f6fb;
+}
+
+/* Header Bar */
+.header-bar {
+    width: 100%;
+    background: #2d3a4b;
+    color: #fff;
+    padding: 18px 32px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    box-shadow: 0 2px 8px rgba(44,62,80,0.07);
+    margin-bottom: 0;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 320px;
+    background: #fff;
+    border-right: 1px solid #e3e7ed;
+    padding: 32px 24px 24px 24px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 2px 0 8px rgba(44,62,80,0.04);
+}
+
+.upload-section {
+    margin-bottom: 32px;
+}
+
+.upload-section h3 {
+    margin-bottom: 18px;
+    color: #2d3a4b;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.btn {
+    background: linear-gradient(90deg, #4f8cff 0%, #2355d8 100%);
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 8px 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 1rem;
+    font-weight: 500;
+    box-shadow: 0 2px 8px rgba(44,62,80,0.07);
+    transition: background 0.2s, box-shadow 0.2s;
+}
+
+.btn:hover {
+    background: linear-gradient(90deg, #2355d8 0%, #4f8cff 100%);
+    box-shadow: 0 4px 16px rgba(44,62,80,0.10);
+}
+
+.presentation-preview {
+    flex: 1;
+    overflow-y: auto;
+    border-top: 1px solid #e3e7ed;
+    padding-top: 24px;
+}
+
+.presentation-info {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(44,62,80,0.07);
+    padding: 18px 20px 20px 20px;
+    margin-bottom: 18px;
+}
+
+.presentation-info h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 8px 0 4px 0;
+    color: #2d3a4b;
+}
+
+.presentation-info p {
+    font-size: 0.95rem;
+    color: #6c7a89;
+    margin: 2px 0;
+}
+
+.slides-preview {
+    margin-top: 18px;
+}
+
+.slides-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.slide-item {
+    padding: 14px 18px;
+    margin-bottom: 0;
+    background: #f7faff;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 1px 4px rgba(44,62,80,0.04);
+    border: 1px solid #e3e7ed;
+    transition: background 0.2s, border 0.2s;
+}
+
+.slide-item:hover, .slide-item.active {
+    background: #eaf1ff;
+    border: 1.5px solid #4f8cff;
+}
+
+.slide-number {
+    font-weight: bold;
+    margin-right: 16px;
+    color: #2355d8;
+    font-size: 1.1rem;
+}
+
+.slide-title {
+    flex-grow: 1;
+    font-size: 1.05rem;
+    color: #2d3a4b;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+/* Main Content Styles */
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 32px 40px 32px 40px;
+    background: #f4f6fb;
+}
+
+.top-bar {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 28px;
+}
+
+.top-bar .btn {
+    width: auto;
+    padding: 12px 28px;
+    font-size: 1.05rem;
+}
+
+/* Chat Interface Styles */
+.chat-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 2px 12px rgba(44,62,80,0.08);
+    border: 1px solid #e3e7ed;
+}
+
+.chat-messages {
+    flex: 1;
+    overflow-y: auto;
+    padding: 32px 28px 18px 28px;
+}
+
+.message {
+    margin-bottom: 18px;
+    max-width: 80%;
+}
+
+.message.user {
+    margin-left: auto;
+}
+
+.message-content {
+    padding: 12px 18px;
+    border-radius: 16px;
+    background: #eaf1ff;
+    white-space: pre-wrap;
+    line-height: 1.6;
+    font-size: 1.05rem;
+    color: #2d3a4b;
+    box-shadow: 0 1px 4px rgba(44,62,80,0.04);
+}
+
+.message.user .message-content {
+    background: linear-gradient(90deg, #4f8cff 0%, #2355d8 100%);
+    color: #fff;
+}
+
+.message.system .message-content {
+    background: #f7faff;
+    color: #2d3a4b;
+}
+
+.message-content ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 8px 0;
+}
+
+.message-content li {
+    position: relative;
+    padding-left: 20px;
+    margin: 4px 0;
+}
+
+.message-content li:before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #2355d8;
+}
+
+.chat-input-container {
+    display: flex;
+    gap: 12px;
+    padding: 24px 28px;
+    border-top: 1px solid #e3e7ed;
+    align-items: flex-start;
+    background: #f7faff;
+    border-radius: 0 0 14px 14px;
+}
+
+#messageInput {
+    flex: 1;
+    padding: 14px 16px;
+    border: 1px solid #e3e7ed;
+    border-radius: 8px;
+    resize: none;
+    min-height: 44px;
+    font-family: inherit;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    background: #fff;
+    color: #2d3a4b;
+    box-shadow: 0 1px 4px rgba(44,62,80,0.04);
+}
+
+.chat-input-container .btn {
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    border-radius: 8px;
+    font-size: 1.2rem;
+}
+
+.chat-input-container .btn i {
+    font-size: 18px;
+}
+
+/* Typing Indicator */
+.typing {
+    opacity: 0.7;
+}
+
+/* Placeholder Styles */
+.placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    color: #6c7a89;
+    text-align: center;
+}
+
+.placeholder i {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+/* Bullet Points Styles */
+.bullet-points-preview {
+    display: flex;
+    gap: 12px;
+    margin-top: 12px;
+    overflow-x: auto;
+    padding-bottom: 5px;
+}
+
+.bullet-point-box {
+    background: #f7faff;
+    padding: 18px;
+    border-radius: 8px;
+    min-width: 200px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    box-shadow: 0 1px 4px rgba(44,62,80,0.04);
+    border: 1px solid #e3e7ed;
+}
+
+.bullet-point-title {
+    font-size: 1.05rem;
+    color: #dc3545;
+    font-weight: bold;
+}
+
+.bullet-point-content {
+    color: #2d3a4b;
+    font-size: 0.98rem;
+    line-height: 1.5;
+} 

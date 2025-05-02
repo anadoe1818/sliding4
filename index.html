@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presentation Editor</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Left Sidebar -->
+        <div class="sidebar">
+            <div class="upload-section">
+                <h3>Presentation Options</h3>
+                <button id="loadPresentation" class="btn">
+                    <i class="fas fa-upload"></i> Upload PPT
+                </button>
+                <button id="newPresentation" class="btn">
+                    <i class="fas fa-plus"></i> New Presentation
+                </button>
+                <input type="file" id="fileInput" accept=".ppt,.pptx" style="display: none;">
+            </div>
+            <div id="presentation-preview" class="presentation-preview">
+                <!-- Slides preview will be shown here -->
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="top-bar">
+                <button id="addSlide" class="btn">
+                    <i class="fas fa-plus"></i> Add New Slide
+                </button>
+                <button id="savePresentation" class="btn">
+                    <i class="fas fa-save"></i> Save Presentation
+                </button>
+            </div>
+
+            <!-- Chat Interface -->
+            <div class="chat-container">
+                <div id="chatMessages" class="chat-messages"></div>
+                <div class="chat-input-container">
+                    <textarea id="messageInput" placeholder="Type your message here..."></textarea>
+                    <button id="sendMessage" class="btn">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
